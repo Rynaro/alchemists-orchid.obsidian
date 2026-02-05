@@ -1,0 +1,181 @@
+{
+  "$schema": "https://schemas.design-tokens.com/design-tokens.json",
+  "$description": "Component-level tokens for Obsidian UI elements. These reference semantic tokens from semantic.json.",
+  "obsidian": {
+    "workspace": {
+      "background": {
+        "$value": "{color.surface.dark}",
+        "$type": "color",
+        "$description": "Main workspace background",
+        "$extensions": {
+          "ai.context": {
+            "purpose": "workspace-background",
+            "useCases": [".workspace", ".mod-root.workspaces"]
+          }
+        }
+      }
+    },
+    "sidebar": {
+      "background": {
+        "$value": "{color.surface.subtle.dark}",
+        "$type": "color",
+        "$description": "Sidebar background (file explorer, outline, etc.)",
+        "$extensions": {
+          "ai.context": {
+            "purpose": "sidebar-background",
+            "useCases": [".workspace-ribbon", ".mod-left-split"]
+          }
+        }
+      }
+    },
+    "status-bar": {
+      "background": {
+        "$value": "{color.surface.subtle.dark}",
+        "$type": "color",
+        "$description": "Status bar background",
+        "$extensions": {
+          "ai.context": {
+            "purpose": "status-bar-background",
+            "useCases": [".status-bar"]
+          }
+        }
+      },
+      "text": {
+        "$value": "{color.text.secondary.dark}",
+        "$type": "color",
+        "$description": "Status bar text color"
+      }
+    },
+    "editor": {
+      "background": {
+        "$value": "{color.surface.dark}",
+        "$type": "color",
+        "$description": "Editor pane background",
+        "$extensions": {
+          "ai.context": {
+            "purpose": "editor-background",
+            "useCases": [".workspace-leaf", ".view-content"]
+          }
+        }
+      },
+      "text": {
+        "$value": "{color.text.primary.dark}",
+        "$type": "color",
+        "$description": "Editor text color"
+      }
+    },
+    "code": {
+      "background": {
+        "$value": "#262b36",
+        "$type": "color",
+        "$description": "Code block background (dark mode)",
+        "$extensions": {
+          "ai.context": {
+            "purpose": "code-background",
+            "useCases": ["code", ".cm-inline-code"]
+          }
+        }
+      },
+      "text": {
+        "$value": "{color.text.secondary.dark}",
+        "$type": "color",
+        "$description": "Code text color"
+      },
+      "keyword": {
+        "$value": "{color.accent.strong.dark}",
+        "$type": "color",
+        "$description": "Code keyword color (purple accent)"
+      },
+      "string": {
+        "$value": "{color.success.dark}",
+        "$type": "color",
+        "$description": "Code string literal color (green)"
+      }
+    },
+    "link": {
+      "default": {
+        "$value": "{color.accent.primary.dark}",
+        "$type": "color",
+        "$description": "Link color",
+        "$extensions": {
+          "ai.context": {
+            "purpose": "link-color",
+            "useCases": ["a", ".cm-url"]
+          }
+        }
+      },
+      "hover": {
+        "$value": "{color.accent.strong.dark}",
+        "$type": "color",
+        "$description": "Link hover color"
+      }
+    },
+    "selection": {
+      "background": {
+        "$value": "{color.accent.info.dark}",
+        "$type": "color",
+        "$description": "Text selection background (with transparency)",
+        "$extensions": {
+          "ai.context": {
+            "purpose": "selection-background",
+            "useCases": [".cm-selectionBackground"]
+          }
+        }
+      }
+    },
+    "highlight": {
+      "background": {
+        "$value": "{color.accent.primary.dark}",
+        "$type": "color",
+        "$description": "Text highlight/mark background (with transparency)",
+        "$extensions": {
+          "ai.context": {
+            "purpose": "highlight-background",
+            "useCases": ["mark"]
+          }
+        }
+      }
+    },
+    "callout": {
+      "info": {
+        "border": {
+          "$value": "{color.accent.info.dark}",
+          "$type": "color",
+          "$description": "Info callout border color",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "callout-info-border",
+              "useCases": [".callout[data-callout='info']"]
+            }
+          }
+        }
+      },
+      "success": {
+        "border": {
+          "$value": "{color.success.dark}",
+          "$type": "color",
+          "$description": "Success callout border color",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "callout-success-border",
+              "useCases": [".callout[data-callout='success']"]
+            }
+          }
+        }
+      },
+      "warning": {
+        "border": {
+          "$value": "{color.warning.dark}",
+          "$type": "color",
+          "$description": "Warning callout border color",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "callout-warning-border",
+              "useCases": [".callout[data-callout='warning']"]
+            }
+          }
+        }
+      }
+    }
+  }
+}

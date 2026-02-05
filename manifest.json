@@ -1,0 +1,11 @@
+{
+  "id": "alchemists-orchid",
+  "name": "Alchemist's Orchid",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "author": "Henrique A. Lavezzo",
+  "authorUrl": "https://github.com/Rynaro",
+  "description": "An accessibility-focused Obsidian theme based on the Alchemist's Orchid color system (dark, light, sepia).",
+  "theme": true,
+  "license": "MIT"
+}

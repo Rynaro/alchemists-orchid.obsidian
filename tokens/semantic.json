@@ -1,0 +1,461 @@
+{
+  "$schema": "https://schemas.design-tokens.com/design-tokens.json",
+  "$description": "Semantic color tokens for Alchemist's Orchid Obsidian theme. These tokens map to --ao-* CSS variables in theme.css.",
+  "color": {
+    "surface": {
+      "dark": {
+        "$value": "#2e3440",
+        "$type": "color",
+        "$description": "Primary background surface (Deep Arctic Night)",
+        "$extensions": {
+          "ai.context": {
+            "purpose": "background-primary",
+            "useCases": ["editor-background", "workspace-background"]
+          },
+          "a11y": {
+            "contrastWith": "color.text.primary.dark",
+            "ratio": "10.26:1",
+            "wcag": "AAA"
+          }
+        }
+      },
+      "light": {
+        "$value": "#fafbfc",
+        "$type": "color",
+        "$description": "Primary background surface (Frosted Glass)",
+        "$extensions": {
+          "ai.context": {
+            "purpose": "background-primary",
+            "useCases": ["editor-background", "workspace-background"]
+          },
+          "a11y": {
+            "contrastWith": "color.text.primary.light",
+            "ratio": "12.06:1",
+            "wcag": "AAA"
+          }
+        }
+      },
+      "subtle": {
+        "dark": {
+          "$value": "#252a34",
+          "$type": "color",
+          "$description": "Subtle background variant for dark mode",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "background-secondary",
+              "useCases": ["sidebar-alt", "status-bar"]
+            }
+          }
+        },
+        "light": {
+          "$value": "#f1f4f7",
+          "$type": "color",
+          "$description": "Subtle background variant for light mode",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "background-secondary",
+              "useCases": ["sidebar-alt", "status-bar"]
+            }
+          }
+        }
+      },
+      "elevated": {
+        "dark": {
+          "$value": "#363c4a",
+          "$type": "color",
+          "$description": "Elevated surface (panels, modals) for dark mode",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "background-elevated",
+              "useCases": ["modals", "panels", "headers"]
+            }
+          }
+        },
+        "light": {
+          "$value": "#ffffff",
+          "$type": "color",
+          "$description": "Elevated surface (panels, modals) for light mode",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "background-elevated",
+              "useCases": ["modals", "panels", "headers"]
+            }
+          }
+        }
+      }
+    },
+    "text": {
+      "primary": {
+        "dark": {
+          "$value": "#e5e9f0",
+          "$type": "color",
+          "$description": "Primary text color (Soft Snowfall)",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "text-primary",
+              "useCases": ["body-text", "headings"]
+            },
+            "a11y": {
+              "contrastOn": "color.surface.dark",
+              "ratio": "10.26:1",
+              "wcag": "AAA"
+            }
+          }
+        },
+        "light": {
+          "$value": "#2e3440",
+          "$type": "color",
+          "$description": "Primary text color (Deep Arctic Night)",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "text-primary",
+              "useCases": ["body-text", "headings"]
+            },
+            "a11y": {
+              "contrastOn": "color.surface.light",
+              "ratio": "12.06:1",
+              "wcag": "AAA"
+            }
+          }
+        }
+      },
+      "secondary": {
+        "dark": {
+          "$value": "#cbd0da",
+          "$type": "color",
+          "$description": "Secondary text (muted but readable)",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "text-secondary",
+              "useCases": ["metadata", "captions", "code"]
+            }
+          }
+        },
+        "light": {
+          "$value": "#4c566a",
+          "$type": "color",
+          "$description": "Secondary text (muted but readable)",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "text-secondary",
+              "useCases": ["metadata", "captions", "code"]
+            }
+          }
+        }
+      },
+      "muted": {
+        "dark": {
+          "$value": "#a0a6b3",
+          "$type": "color",
+          "$description": "Muted text (subtle, low emphasis)",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "text-muted",
+              "useCases": ["faint-text", "placeholders"]
+            }
+          }
+        },
+        "light": {
+          "$value": "#6b7080",
+          "$type": "color",
+          "$description": "Muted text (subtle, low emphasis)",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "text-muted",
+              "useCases": ["faint-text", "placeholders"]
+            }
+          }
+        }
+      }
+    },
+    "accent": {
+      "primary": {
+        "dark": {
+          "$value": "#e8a4cc",
+          "$type": "color",
+          "$description": "Primary accent (Pastel Bloom - Pink)",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "accent-primary",
+              "useCases": ["links", "buttons", "highlights"],
+              "mood": ["creative", "transformative"]
+            },
+            "a11y": {
+              "contrastOn": "color.surface.dark",
+              "ratio": "4.2:1",
+              "wcag": "AA"
+            }
+          }
+        },
+        "light": {
+          "$value": "#c41585",
+          "$type": "color",
+          "$description": "Primary accent (Deep Bloom - Pink)",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "accent-primary",
+              "useCases": ["links", "buttons", "highlights"],
+              "mood": ["creative", "transformative"]
+            },
+            "a11y": {
+              "contrastOn": "color.surface.light",
+              "ratio": "7.8:1",
+              "wcag": "AAA"
+            }
+          }
+        }
+      },
+      "strong": {
+        "dark": {
+          "$value": "#c89bd0",
+          "$type": "color",
+          "$description": "Strong accent (Mystic Rune - Purple)",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "accent-strong",
+              "useCases": ["hover-states", "active-states", "emphasis"]
+            }
+          }
+        },
+        "light": {
+          "$value": "#8839aa",
+          "$type": "color",
+          "$description": "Strong accent (Royal Rune - Purple)",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "accent-strong",
+              "useCases": ["hover-states", "active-states", "emphasis"]
+            }
+          }
+        }
+      },
+      "info": {
+        "dark": {
+          "$value": "#81a1c1",
+          "$type": "color",
+          "$description": "Info accent (Nordic Sky - Blue)",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "accent-info",
+              "useCases": ["info-callouts", "selections", "info-badges"]
+            }
+          }
+        },
+        "light": {
+          "$value": "#2d6299",
+          "$type": "color",
+          "$description": "Info accent (Ocean Depth - Blue)",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "accent-info",
+              "useCases": ["info-callouts", "selections", "info-badges"]
+            }
+          }
+        }
+      },
+      "alt": {
+        "dark": {
+          "$value": "#8fbcbb",
+          "$type": "color",
+          "$description": "Alternative accent (Glacial Stream - Cyan)",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "accent-alt",
+              "useCases": ["secondary-actions", "decorative"]
+            }
+          }
+        },
+        "light": {
+          "$value": "#1d7a78",
+          "$type": "color",
+          "$description": "Alternative accent (Deep Stream - Cyan)",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "accent-alt",
+              "useCases": ["secondary-actions", "decorative"]
+            }
+          }
+        }
+      }
+    },
+    "success": {
+      "dark": {
+        "$value": "#a3be8c",
+        "$type": "color",
+        "$description": "Success state (Frosted Fern - Green)",
+        "$extensions": {
+          "ai.context": {
+            "purpose": "success",
+            "useCases": ["success-callouts", "code-strings", "positive-feedback"]
+          }
+        }
+      },
+      "light": {
+        "$value": "#4d7028",
+        "$type": "color",
+        "$description": "Success state (Forest Fern - Green)",
+        "$extensions": {
+          "ai.context": {
+            "purpose": "success",
+            "useCases": ["success-callouts", "code-strings", "positive-feedback"]
+          }
+        }
+      }
+    },
+    "warning": {
+      "dark": {
+        "$value": "#dfca9a",
+        "$type": "color",
+        "$description": "Warning state (Golden Dusk - Yellow)",
+        "$extensions": {
+          "ai.context": {
+            "purpose": "warning",
+            "useCases": ["warning-callouts", "cautions", "alerts"]
+          }
+        }
+      },
+      "light": {
+        "$value": "#8a6000",
+        "$type": "color",
+        "$description": "Warning state (Amber Dusk - Yellow)",
+        "$extensions": {
+          "ai.context": {
+            "purpose": "warning",
+            "useCases": ["warning-callouts", "cautions", "alerts"]
+          }
+        }
+      }
+    },
+    "border": {
+      "subtle": {
+        "dark": {
+          "$value": "#3b4252",
+          "$type": "color",
+          "$description": "Subtle border for dark mode",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "border-subtle",
+              "useCases": ["dividers", "panel-borders", "subtle-separators"]
+            }
+          }
+        },
+        "light": {
+          "$value": "#d0d7e2",
+          "$type": "color",
+          "$description": "Subtle border for light mode",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "border-subtle",
+              "useCases": ["dividers", "panel-borders", "subtle-separators"]
+            }
+          }
+        }
+      },
+      "strong": {
+        "dark": {
+          "$value": "#4c566a",
+          "$type": "color",
+          "$description": "Strong border for dark mode",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "border-strong",
+              "useCases": ["active-borders", "focus-rings", "emphasis"]
+            }
+          }
+        },
+        "light": {
+          "$value": "#b3bdcc",
+          "$type": "color",
+          "$description": "Strong border for light mode",
+          "$extensions": {
+            "ai.context": {
+              "purpose": "border-strong",
+              "useCases": ["active-borders", "focus-rings", "emphasis"]
+            }
+          }
+        }
+      }
+    }
+  },
+  "sepia": {
+    "$description": "Sepia flavor tokens (override light mode when data-ao-flavor='sepia' is set)",
+    "color": {
+      "surface": {
+        "$value": "#f5f0e6",
+        "$type": "color",
+        "$description": "Sepia background (Warm Parchment)",
+        "$extensions": {
+          "ai.context": {
+            "purpose": "background-primary-sepia",
+            "useCases": ["editor-background", "workspace-background"]
+          }
+        }
+      },
+      "surface-subtle": {
+        "$value": "#ebe1d3",
+        "$type": "color",
+        "$description": "Sepia subtle background"
+      },
+      "surface-elevated": {
+        "$value": "#fffaf0",
+        "$type": "color",
+        "$description": "Sepia elevated surface"
+      },
+      "text-primary": {
+        "$value": "#3b3228",
+        "$type": "color",
+        "$description": "Sepia primary text (Aged Ink)"
+      },
+      "text-secondary": {
+        "$value": "#5c4b3b",
+        "$type": "color",
+        "$description": "Sepia secondary text"
+      },
+      "text-muted": {
+        "$value": "#7a6650",
+        "$type": "color",
+        "$description": "Sepia muted text"
+      },
+      "accent-primary": {
+        "$value": "#b52080",
+        "$type": "color",
+        "$description": "Sepia primary accent (Rose Thorn)"
+      },
+      "accent-strong": {
+        "$value": "#7b3399",
+        "$type": "color",
+        "$description": "Sepia strong accent (Plum Wine)"
+      },
+      "accent-info": {
+        "$value": "#2e5e8a",
+        "$type": "color",
+        "$description": "Sepia info accent (Vintage Indigo)"
+      },
+      "accent-alt": {
+        "$value": "#1a6b69",
+        "$type": "color",
+        "$description": "Sepia alt accent (Patina)"
+      },
+      "success": {
+        "$value": "#4a6a28",
+        "$type": "color",
+        "$description": "Sepia success (Sage Leaf)"
+      },
+      "warning": {
+        "$value": "#806000",
+        "$type": "color",
+        "$description": "Sepia warning (Antique Gold)"
+      },
+      "border-subtle": {
+        "$value": "#ddceb9",
+        "$type": "color",
+        "$description": "Sepia subtle border"
+      },
+      "border-strong": {
+        "$value": "#c4ae90",
+        "$type": "color",
+        "$description": "Sepia strong border"
+      }
+    }
+  }
+}

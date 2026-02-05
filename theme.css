@@ -1,0 +1,266 @@
+/*
+  Alchemist's Orchid Obsidian Theme
+  ---------------------------------
+  - Palette: https://github.com/Rynaro/alchemists-orchid
+  - Tokens:  aligned conceptually with https://github.com/Rynaro/alchemists-orchid-papyrus
+  - Contract for AI:
+      1) Do NOT inline hex colors directly into Obsidian variables.
+      2) Prefer editing the --ao-* variables below.
+      3) Maintain accessibility (WCAG AA) when changing foreground/background pairs.
+*/
+
+/*
+  GLOBAL AO TOKEN VARIABLES
+  These map semantic color ideas (surface, text, accent, etc.) to concrete hex values
+  for each visual flavor: dark, light, sepia.
+*/
+
+/* Dark mode tokens (from Alchemist's Orchid dark palette) */
+/* Maps to tokens/semantic.json: color.surface.dark, color.text.*.dark, etc. */
+body.theme-dark {
+  /* tokens/semantic.json: color.surface.dark */
+  --ao-color-surface-dark: #2e3440; /* Deep Arctic Night */
+  /* tokens/semantic.json: color.surface.subtle.dark */
+  --ao-color-surface-subtle-dark: #252a34;
+  /* tokens/semantic.json: color.surface.elevated.dark */
+  --ao-color-elevated-dark: #363c4a;
+
+  /* tokens/semantic.json: color.text.primary.dark */
+  --ao-color-text-primary-dark: #e5e9f0; /* Soft Snowfall */
+  /* tokens/semantic.json: color.text.secondary.dark */
+  --ao-color-text-secondary-dark: #cbd0da;
+  /* tokens/semantic.json: color.text.muted.dark */
+  --ao-color-text-muted-dark: #a0a6b3;
+
+  /* tokens/semantic.json: color.accent.primary.dark */
+  --ao-color-accent-primary-dark: #e8a4cc; /* Pastel Bloom - Pink */
+  /* tokens/semantic.json: color.accent.strong.dark */
+  --ao-color-accent-strong-dark: #c89bd0; /* Mystic Rune - Purple */
+  /* tokens/semantic.json: color.accent.info.dark */
+  --ao-color-accent-info-dark: #81a1c1; /* Nordic Sky - Blue */
+  /* tokens/semantic.json: color.accent.alt.dark */
+  --ao-color-accent-alt-dark: #8fbcbb; /* Glacial Stream - Cyan */
+  /* tokens/semantic.json: color.success.dark */
+  --ao-color-success-dark: #a3be8c; /* Frosted Fern - Green */
+  /* tokens/semantic.json: color.warning.dark */
+  --ao-color-warning-dark: #dfca9a; /* Golden Dusk - Yellow */
+
+  /* tokens/semantic.json: color.border.subtle.dark */
+  --ao-color-border-subtle-dark: #3b4252;
+  /* tokens/semantic.json: color.border.strong.dark */
+  --ao-color-border-strong-dark: #4c566a;
+}
+
+/* Light mode tokens (from Alchemist's Orchid light palette) */
+/* Maps to tokens/semantic.json: color.surface.light, color.text.*.light, etc. */
+body.theme-light {
+  /* tokens/semantic.json: color.surface.light */
+  --ao-color-surface-light: #fafbfc; /* Frosted Glass */
+  /* tokens/semantic.json: color.surface.subtle.light */
+  --ao-color-surface-subtle-light: #f1f4f7;
+  /* tokens/semantic.json: color.surface.elevated.light */
+  --ao-color-elevated-light: #ffffff;
+
+  /* tokens/semantic.json: color.text.primary.light */
+  --ao-color-text-primary-light: #2e3440; /* Deep Arctic Night */
+  /* tokens/semantic.json: color.text.secondary.light */
+  --ao-color-text-secondary-light: #4c566a;
+  /* tokens/semantic.json: color.text.muted.light */
+  --ao-color-text-muted-light: #6b7080;
+
+  /* tokens/semantic.json: color.accent.primary.light */
+  --ao-color-accent-primary-light: #c41585; /* Deep Bloom - Pink */
+  /* tokens/semantic.json: color.accent.strong.light */
+  --ao-color-accent-strong-light: #8839aa; /* Royal Rune - Purple */
+  /* tokens/semantic.json: color.accent.info.light */
+  --ao-color-accent-info-light: #2d6299; /* Ocean Depth - Blue */
+  /* tokens/semantic.json: color.accent.alt.light */
+  --ao-color-accent-alt-light: #1d7a78; /* Deep Stream - Cyan */
+  /* tokens/semantic.json: color.success.light */
+  --ao-color-success-light: #4d7028; /* Forest Fern - Green */
+  /* tokens/semantic.json: color.warning.light */
+  --ao-color-warning-light: #8a6000; /* Amber Dusk - Yellow */
+
+  /* tokens/semantic.json: color.border.subtle.light */
+  --ao-color-border-subtle-light: #d0d7e2;
+  /* tokens/semantic.json: color.border.strong.light */
+  --ao-color-border-strong-light: #b3bdcc;
+}
+
+/* Sepia flavor (overrides light tokens when enabled) */
+/* Maps to tokens/semantic.json: sepia.color.* */
+body.theme-light[data-ao-flavor="sepia"] {
+  /* tokens/semantic.json: sepia.color.surface */
+  --ao-color-surface-light: #f5f0e6; /* Warm Parchment */
+  /* tokens/semantic.json: sepia.color.surface-subtle */
+  --ao-color-surface-subtle-light: #ebe1d3;
+  /* tokens/semantic.json: sepia.color.surface-elevated */
+  --ao-color-elevated-light: #fffaf0;
+
+  /* tokens/semantic.json: sepia.color.text-primary */
+  --ao-color-text-primary-light: #3b3228; /* Aged Ink */
+  /* tokens/semantic.json: sepia.color.text-secondary */
+  --ao-color-text-secondary-light: #5c4b3b;
+  /* tokens/semantic.json: sepia.color.text-muted */
+  --ao-color-text-muted-light: #7a6650;
+
+  /* tokens/semantic.json: sepia.color.accent-primary */
+  --ao-color-accent-primary-light: #b52080; /* Rose Thorn - Pink */
+  /* tokens/semantic.json: sepia.color.accent-strong */
+  --ao-color-accent-strong-light: #7b3399; /* Plum Wine - Purple */
+  /* tokens/semantic.json: sepia.color.accent-info */
+  --ao-color-accent-info-light: #2e5e8a; /* Vintage Indigo - Blue */
+  /* tokens/semantic.json: sepia.color.accent-alt */
+  --ao-color-accent-alt-light: #1a6b69; /* Patina - Cyan */
+  /* tokens/semantic.json: sepia.color.success */
+  --ao-color-success-light: #4a6a28; /* Sage Leaf - Green */
+  /* tokens/semantic.json: sepia.color.warning */
+  --ao-color-warning-light: #806000; /* Antique Gold - Yellow */
+
+  /* tokens/semantic.json: sepia.color.border-subtle */
+  --ao-color-border-subtle-light: #ddceb9;
+  /* tokens/semantic.json: sepia.color.border-strong */
+  --ao-color-border-strong-light: #c4ae90;
+}
+
+/*
+  AO VARIABLES → OBSIDIAN THEME VARIABLES
+  These map our semantic AO variables to Obsidian's documented theme variables.
+  When adjusting colors, prefer changing the --ao-* values above instead of the
+  mappings below.
+*/
+
+body.theme-dark {
+  /* Surfaces */
+  --background-primary: var(--ao-color-surface-dark);          /* main editor background */
+  --background-primary-alt: var(--ao-color-surface-subtle-dark);
+  --background-secondary: #232833;
+  --background-secondary-alt: var(--ao-color-elevated-dark);
+
+  /* Text */
+  --text-normal: var(--ao-color-text-primary-dark);
+  --text-muted: var(--ao-color-text-secondary-dark);
+  --text-faint: var(--ao-color-text-muted-dark);
+  --text-accent: var(--ao-color-accent-primary-dark);
+  --text-on-accent: #2e3440;
+
+  /* Accents / interactive */
+  --interactive-accent: var(--ao-color-accent-primary-dark);
+  --interactive-accent-hover: var(--ao-color-accent-strong-dark);
+
+  /* Graph / outlines / borders */
+  --background-modifier-border: var(--ao-color-border-subtle-dark);
+  --background-modifier-border-hover: var(--ao-color-border-strong-dark);
+
+  /* Selection & highlights */
+  --text-selection: color-mix(in srgb, var(--ao-color-accent-info-dark) 35%, transparent);
+  --text-highlight-bg: color-mix(in srgb, var(--ao-color-accent-primary-dark) 25%, transparent);
+
+  /* Code blocks */
+  --code-background: #262b36;
+  --code-normal: var(--ao-color-text-secondary-dark);
+  --code-keyword: var(--ao-color-accent-strong-dark);
+  --code-string: var(--ao-color-success-dark);
+}
+
+body.theme-light {
+  /* Surfaces */
+  --background-primary: var(--ao-color-surface-light);
+  --background-primary-alt: var(--ao-color-surface-subtle-light);
+  --background-secondary: #e9edf2;
+  --background-secondary-alt: var(--ao-color-elevated-light);
+
+  /* Text */
+  --text-normal: var(--ao-color-text-primary-light);
+  --text-muted: var(--ao-color-text-secondary-light);
+  --text-faint: var(--ao-color-text-muted-light);
+  --text-accent: var(--ao-color-accent-primary-light);
+  --text-on-accent: #fafbfc;
+
+  /* Accents / interactive */
+  --interactive-accent: var(--ao-color-accent-primary-light);
+  --interactive-accent-hover: var(--ao-color-accent-strong-light);
+
+  /* Graph / outlines / borders */
+  --background-modifier-border: var(--ao-color-border-subtle-light);
+  --background-modifier-border-hover: var(--ao-color-border-strong-light);
+
+  /* Selection & highlights */
+  --text-selection: color-mix(in srgb, var(--ao-color-accent-info-light) 20%, transparent);
+  --text-highlight-bg: color-mix(in srgb, var(--ao-color-accent-primary-light) 18%, transparent);
+
+  /* Code blocks */
+  --code-background: #edf0f5;
+  --code-normal: var(--ao-color-text-secondary-light);
+  --code-keyword: var(--ao-color-accent-strong-light);
+  --code-string: var(--ao-color-success-light);
+}
+
+/*
+  BASIC TYPOGRAPHY & ELEMENTS
+  Keep this minimal in the first iteration. We primarily want surfaces, text, and
+  high-level chrome to feel coherent with the palette.
+*/
+
+.workspace,
+.mod-root.workspaces {
+  background-color: var(--background-primary);
+  color: var(--text-normal);
+}
+
+.workspace-leaf,
+.view-content {
+  background-color: var(--background-primary);
+}
+
+.status-bar {
+  background-color: var(--background-secondary);
+  color: var(--text-muted);
+  border-top: 1px solid var(--background-modifier-border);
+}
+
+.mod-header,
+.workspace-ribbon {
+  background-color: var(--background-secondary-alt);
+  border-color: var(--background-modifier-border);
+}
+
+a,
+.cm-url {
+  color: var(--text-accent);
+}
+
+a:hover,
+.cm-url:hover {
+  color: var(--interactive-accent-hover);
+}
+
+mark {
+  background-color: var(--text-highlight-bg);
+  color: inherit;
+}
+
+.cm-selectionBackground,
+.cm-selectionBackground + .cm-selectionBackground {
+  background-color: var(--text-selection);
+}
+
+code,
+.cm-inline-code {
+  background-color: var(--code-background);
+  color: var(--code-normal);
+}
+
+/* Very light callout tuning just to integrate palette softly */
+.callout[data-callout="info"] {
+  border-left: 3px solid var(--ao-color-accent-info-dark, var(--ao-color-accent-info-light));
+}
+
+.callout[data-callout="success"] {
+  border-left: 3px solid var(--ao-color-success-dark, var(--ao-color-success-light));
+}
+
+.callout[data-callout="warning"] {
+  border-left: 3px solid var(--ao-color-warning-dark, var(--ao-color-warning-light));
+}
+
